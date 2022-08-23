@@ -22,3 +22,16 @@ function players (Name){
      return selectedplayersParent.childNodes.length;
     
 }
+
+document.getElementById('btn-calculate').addEventListener('click',function(){
+    const playersCount = document.getElementById('seleceted-player-id');
+    const playersCountLength = playersCount.childNodes.length - 1;
+    const perPlayerCost = getInputFeildNUmber('per-player-cost');
+   const totalPlayerCost = perPlayerCost * playersCountLength;
+ 
+   const playersExpenses = document.getElementById('player-expenses');
+   playersExpenses.innerText = totalPlayerCost;
+ 
+   return totalPlayerCost;
+ 
+ })
