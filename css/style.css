@@ -7,8 +7,10 @@ body{
 }
 header{
     width: 100%;
-    height: 40vh;
+    height: 40%;
+
 }
+
 header h1{
     margin: 0 auto;
 font-family: 'Berkshire Swash';
