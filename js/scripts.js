@@ -11,7 +11,7 @@ function players (Name){
         const li = document.createElement('li');
         li.innerText = playerName;
         selectedplayersParent.appendChild(li)
-        playersArray.push(li)
+        playersArray.push(li);
       
      }
      else{
