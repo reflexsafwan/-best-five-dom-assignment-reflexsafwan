@@ -1,0 +1,22 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;;
+}
+header{
+    width: 100%;
+    height: 40vh;
+}
+header h1{
+    margin: 0 auto;
+font-family: 'Berkshire Swash';
+font-style: normal;
+font-weight: 400;
+font-size: 76px;
+line-height: 94px;
+text-align: center;
+text-transform: capitalize;
+color: #FF5E19;
+}

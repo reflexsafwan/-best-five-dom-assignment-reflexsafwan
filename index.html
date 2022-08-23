@@ -5,11 +5,140 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Select world best five football players</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
+    <header>
+      <div class="flex items-center m-auto">
+        <h1 class="mt-36">Select world Best Five players</h1>
+      </div>
+    </header>
+    <section class="w-9/12 mx-auto">
+        <div class="grid grid-cols-2 gap-4">
+           <div class=" card-parent-div grid grid-cols-2">
+            <!-- card 01 -->
+                <div class="card w-96 bg-base-100 shadow-xl">
+                    <figure class="px-10 pt-10">
+                    <img src="./images/Rectangle 144-1.png"  class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 id="Machado" class="card-title">Vítor Machado</h2>
+                        <div>
+                            <button onclick="players('Machado'), this.disabled=true;" class="bg-violet-700 px-6 py-3 text-white font-semibold rounded-lg">select</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- card 02 -->
+                <div class="card w-96 bg-base-100 shadow-xl">
+                    <figure class="px-10 pt-10">
+                    <img src="/images/Rectangle 144-2.png"  class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 id="neymar" class="card-title">Neymar Jr</h2>
+                       <div>
+                        <button onclick="players('neymar'), this.disabled=true;" class="bg-violet-700 px-6 py-3 text-white font-semibold rounded-lg">Select</button>
+                       </div>
+                   
+                    </div>
+                </div>
+                <!-- card 03 -->
+                <div class="card w-96 bg-base-100 shadow-xl">
+                    <figure class="px-10 pt-10">
+                    <img src="/images/Rectangle 144-3.png"  class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 id="ramos" class="card-title">Sergio Ramos</h2>
+                       <div>
+                        <button onclick="players('ramos'), this.disabled=true;" class="bg-violet-700 px-6 py-3 text-white font-semibold rounded-lg">select</button>
+                       </div>
     
-<h1>hello js</h1>
+                    </div>
+                </div>
+                
+                <!-- card 04 -->
+                
+                <div class="card w-96 bg-base-100 shadow-xl">
+                    <figure class="px-10 pt-10">
+                        <img src="/images/Rectangle 144-4.png" class="rounded-xl" />
+                     </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 id="mbappe" class="card-title">Kylian Mbappé</h2>
+                        <div>
+                             <button onclick="players('mbappe'), this.disabled=true;" class="bg-violet-700 px-6 py-3 text-white font-semibold rounded-lg">Select</button>
+                        </div>
+                    </div>
+                 </div>
+    
+                 <!-- card 05 -->
+                 <div class="card w-96 bg-base-100 shadow-xl">
+                    <figure class="px-10 pt-10">
+                    <img src="/images/Rectangle 144-5.png"  class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 id="renato" class="card-title">Renato Sanches</h2>
+                        <div>
+                            <button onclick="players('renato'), this.disabled=true;" class="bg-violet-700 px-6 py-3 text-white font-semibold rounded-lg">select</button>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- card 06 -->
+                <div class="card w-96 bg-base-100 shadow-xl">
+                    <figure class="px-10 pt-10">
+                    <img src="/images/Rectangle 144.png" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 id="messi" class="card-title">Lionel Messi</h2>
+                        <div>
+                            <button  onclick="players('messi'), this.disabled=true; " class="bg-violet-700 px-6 py-3 text-white font-semibold rounded-lg">select</button>
+                        </div>
+                    </div>
+                </div>
+    
+           </div>
+            <!-- side card -->
+            <div class="ml-12 row">
+                <div class="card w-9/12 bg-base-100 shadow-xl mb-10">
+    
+                    <div class="card-body items-center text-center">
+                        <h2 class="card-title">Seleceted player - <span id="players-number">0</span> </h2>
+                           <ol id="seleceted-player-id">
+                           </ol>
 
-    <script src="./js/scripts.js"></script>
+                    </div>
+                </div>
+    
+                <!-- side card two -->
+    
+                <div class="card w-9/12 bg-base-100 shadow-xl">
+    
+                    <div class="card-body items-center text-center">
+                        <h2 class="card-title">BUDGET</h2>
+                        <div>
+                            <p class=" font-semibold text-xl ">Per Players:</p>
+                            <input id="per-player-cost" class="inline px-4 py-1 mt-2" type="text">
+                        </div>
+            
+                        <button id="btn-calculate" class="bg-violet-700 px-6 py-3 text-white font-semibold rounded-lg mt-4">Calculate</button>
+                        <h2 class="text-xl">Player Expenses $<span id="player-expenses">0000</span></h2>
+                        <div>
+                            <p class=" font-semibold text-xl ">Manager:</p>
+                            <input id="manager-const" class="inline px-4 py-1 mt-2" type="text">
+                        </div>
+                        <div>
+                            <p class=" font-semibold text-xl ">Coach:</p>
+                            <input id="coach-cost" class="inline px-4 py-1 mt-2" type="text">
+                        </div>
+                        <button id="total-expenses" class="bg-violet-700 px-6 py-3 text-white font-semibold rounded-lg mt-4">Calculate Total</button>
+                        <h1 class="text-2xl ">Total  $<span id="total">0000</span> </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+ <script src="./js/common.js"></script>     
+<script src="./js/scripts.js"></script>
 </body>
 </html>
