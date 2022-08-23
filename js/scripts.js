@@ -35,3 +35,18 @@ document.getElementById('btn-calculate').addEventListener('click',function(){
    return totalPlayerCost;
  
  })
+
+ document.getElementById('total-expenses').addEventListener('click', function(){
+
+    const managerExpenses = getInputFeildNUmber('manager-const');
+     const coachCost = getInputFeildNUmber('coach-cost');
+ 
+     const playersExpensesString = document.getElementById('player-expenses').innerText;
+     const playersExpenses = parseInt(playersExpensesString);
+     const totalCost = managerExpenses + coachCost + playersExpenses;
+ 
+ 
+     const totalValue = document.getElementById('total');
+     totalValue.innerText = totalCost;
+ 
+ })
